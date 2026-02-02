@@ -195,10 +195,10 @@ To add your own images:
 
 ## 📞 Contact Information
 
-- **Phone**: +91 98765 43210
-- **Email**: info@pandianflowers.com
-- **Address**: 123 Flower Street, Garden City, Tamil Nadu 600001
-- **Hours**: Open Daily, 6:00 AM - 10:00 PM
+- **Phone**: +91 99528 81424
+- **Email**: pandianflowers2020@gmail.com
+- **Address**: Mariyamman Kovil Opposite, Varatharajapuram, Coimbatore - 15
+- **Hours**: Open Daily, 7:00 AM - 9:00 PM
 
 ## 🤝 Contributing
 
