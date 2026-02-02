@@ -1,0 +1,16 @@
+# robots.txt for Pandian Flowers Website
+# Allow all search engines to crawl
+
+User-agent: *
+Allow: /
+Disallow: /admin.html
+Disallow: /js/admin.js
+
+# Allow indexing of all pages
+Allow: *.html
+
+# Sitemap
+Sitemap: https://pandianflowers.github.io/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1
