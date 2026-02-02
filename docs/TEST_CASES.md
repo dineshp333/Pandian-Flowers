@@ -35,7 +35,7 @@
 | Test ID | TC-1.1 |
 | Module | Homepage |
 | Priority | High |
-| Precondition | Browser open, navigate to index.html |
+| Precondition | Browser open, navigate to public/index.html |
 | Test Steps | 1. Open website URL<br>2. Wait for page load<br>3. Check for console errors |
 | Expected Result | Page loads without errors, all elements visible |
 | Actual Result | ✅ Pass |
@@ -306,7 +306,7 @@
 ## 7. Admin Panel Tests
 
 ### TC-7.1: Admin Panel Loads
-| Test Steps | 1. Navigate to admin.html<br>2. Check login form<br>3. Verify layout |
+| Test Steps | 1. Navigate to public/admin.html<br>2. Check login form<br>3. Verify layout |
 | Expected Result | Admin login page displays correctly |
 | Actual Result | ✅ Pass |
 

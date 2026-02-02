@@ -81,13 +81,13 @@ https://YOUR_USERNAME.github.io/pandian-flowers/
 1. Select **"URL prefix"**
 2. Enter your live website URL:
    ```
-   https://YOUR_USERNAME.github.io/pandian-flowers/
+   https://dineshp333.github.io/Pandian-Flowers/public/
    ```
 3. Click **Continue**
 
 ### Step 3: Verify Ownership
 - **Easy method:** Copy the HTML meta tag
-- Go to your `index.html`
+- Go to your `public/index.html`
 - Paste the meta tag in `<head>` section
 - Push changes to GitHub
 - Come back and click **Verify**
@@ -120,7 +120,7 @@ https://YOUR_USERNAME.github.io/pandian-flowers/
 - Login: `flowerpandian1424`
 - Security Q: "What is your goal?"
 - Answer: "make upma happy"
-- Access: `https://YOUR_USERNAME.github.io/pandian-flowers/admin.html`
+- Access: `https://dineshp333.github.io/Pandian-Flowers/public/admin.html`
 
 ✅ **Photo Upload Feature**
 - Upload 10 photos per category

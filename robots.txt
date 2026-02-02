@@ -3,14 +3,14 @@
 
 User-agent: *
 Allow: /
-Disallow: /admin.html
-Disallow: /js/admin.js
+Disallow: /public/admin.html
+Disallow: /public/assets/js/admin.js
 
 # Allow indexing of all pages
-Allow: *.html
+Allow: /public/*.html
 
 # Sitemap
-Sitemap: https://pandianflowers.github.io/sitemap.xml
+Sitemap: https://dineshp333.github.io/Pandian-Flowers/sitemap.xml
 
 # Crawl delay (optional)
 Crawl-delay: 1

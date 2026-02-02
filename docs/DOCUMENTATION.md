@@ -183,46 +183,46 @@ Gallery Display (HTML DOM)
 
 ```
 Pandian Flowers/
-├── index.html                 # Homepage
-├── about.html                 # About page
-├── gallery.html               # Photo gallery
-├── services.html              # Services page
-├── contact.html               # Contact page
-├── order.html                 # Order form
-├── admin.html                 # Admin panel
-│
-├── css/
-│   └── style.css              # Custom styling
-│
-├── js/
-│   ├── script.js              # Main JavaScript
-│   ├── admin.js               # Admin panel logic
-│   └── gallery-loader.js      # Gallery photo loader
-│
-├── images/
-│   ├── wedding/               # Wedding photos
-│   ├── reception/             # Reception photos
-│   ├── home/                  # Home nilavu photos
-│   └── custom/                # Custom design photos
-│
-├── components/
-│   ├── header.html            # Navigation header
-│   └── footer.html            # Footer
+├── public/
+│   ├── index.html              # Homepage
+│   ├── about.html              # About page
+│   ├── gallery.html            # Photo gallery
+│   ├── services.html           # Services page
+│   ├── contact.html            # Contact page
+│   ├── order.html              # Order form
+│   ├── admin.html              # Admin panel
+│   │
+│   ├── assets/
+│   │   ├── css/
+│   │   │   └── style.css        # Custom styling
+│   │   ├── js/
+│   │   │   ├── script.js        # Main JavaScript
+│   │   │   ├── admin.js         # Admin panel logic
+│   │   │   └── gallery-loader.js# Gallery photo loader
+│   │   └── images/
+│   │       ├── wedding/         # Wedding photos
+│   │       ├── reception/       # Reception photos
+│   │       ├── home/            # Home nilavu photos
+│   │       └── custom/          # Custom design photos
+│   │
+│   └── components/
+│       ├── header.html          # Navigation header
+│       └── footer.html          # Footer
 │
 ├── docs/
-│   ├── DOCUMENTATION.md       # This file
-│   ├── REQUIREMENTS.md        # Requirements
-│   ├── TEST_CASES.md          # Test cases
-│   ├── VULNERABILITY_SCAN.md  # Security scanning
-│   ├── ADMIN_GUIDE.md         # Admin usage guide
-│   ├── GITHUB_PAGES_SETUP.md  # Deployment guide
-│   └── README.md              # Project README
+│   ├── DOCUMENTATION.md         # This file
+│   ├── REQUIREMENTS.md          # Requirements
+│   ├── TEST_CASES.md            # Test cases
+│   ├── VULNERABILITY_SCAN.md    # Security scanning
+│   ├── ADMIN_GUIDE.md           # Admin usage guide
+│   ├── GITHUB_PAGES_SETUP.md    # Deployment guide
 │
-├── .git/                      # Git repository
-├── .nojekyll                  # GitHub Pages config
-├── sitemap.xml                # SEO sitemap
-├── robots.txt                 # SEO robots file
-└── .gitignore                 # Git ignore rules
+├── README.md                    # Project README
+├── .git/                        # Git repository
+├── .nojekyll                    # GitHub Pages config
+├── sitemap.xml                  # SEO sitemap
+├── robots.txt                   # SEO robots file
+└── .gitignore                   # Git ignore rules
 ```
 
 ---
@@ -233,17 +233,17 @@ Pandian Flowers/
 
 | File | Purpose | Key Components |
 |------|---------|-----------------|
-| index.html | Homepage | Hero, Featured, Testimonials |
-| about.html | Company info | Story, Values, Why Us |
-| gallery.html | Photo showcase | Filter buttons, Dynamic photos |
-| services.html | Service details | 6 service cards, WhatsApp links |
-| contact.html | Contact & form | Form, Map, Contact cards |
-| order.html | Order form | Dropdown, Date picker, WhatsApp |
-| admin.html | Admin panel | Login, Photo upload, Delete |
+| public/index.html | Homepage | Hero, Featured, Testimonials |
+| public/about.html | Company info | Story, Values, Why Us |
+| public/gallery.html | Photo showcase | Filter buttons, Dynamic photos |
+| public/services.html | Service details | 6 service cards, WhatsApp links |
+| public/contact.html | Contact & form | Form, Map, Contact cards |
+| public/order.html | Order form | Dropdown, Date picker, WhatsApp |
+| public/admin.html | Admin panel | Login, Photo upload, Delete |
 
 ### CSS Files
 
-**css/style.css** (550+ lines)
+**public/assets/css/style.css** (550+ lines)
 - Color variables (gold, green, pink)
 - Button styles (primary, secondary)
 - Card hover animations
@@ -255,7 +255,7 @@ Pandian Flowers/
 
 ### JavaScript Files
 
-**js/script.js** (400+ lines)
+**public/assets/js/script.js** (400+ lines)
 - Mobile menu toggle
 - Form validation (email, phone, date)
 - Gallery filter functionality
@@ -263,7 +263,7 @@ Pandian Flowers/
 - Intersection observer for animations
 - Error/success messages
 
-**js/admin.js** (350+ lines)
+**public/assets/js/admin.js** (350+ lines)
 - Admin login verification
 - Security question validation
 - Password reset flow
@@ -273,7 +273,7 @@ Pandian Flowers/
 - Photo deletion
 - Category management
 
-**js/gallery-loader.js** (100+ lines)
+**public/assets/js/gallery-loader.js** (100+ lines)
 - Load photos from LocalStorage
 - Dynamic gallery generation
 - Filter button synchronization
@@ -318,12 +318,12 @@ python -m http.server 5500
 
 3. **Access Website**
 ```
-http://localhost:5500
+http://localhost:5500/public/index.html
 ```
 
 4. **Access Admin Panel**
 ```
-http://localhost:5500/admin.html
+http://localhost:5500/public/admin.html
 ```
 
 ### Admin Panel Login
@@ -364,7 +364,7 @@ http://localhost:5500/admin.html
 
 1. **Access Admin Panel**
    - Click "Admin" link in footer
-   - Or go to: `http://localhost:5500/admin.html`
+   - Or go to: `http://localhost:5500/public/admin.html`
 
 2. **Login**
    - Enter password: `flowerpandian1424`

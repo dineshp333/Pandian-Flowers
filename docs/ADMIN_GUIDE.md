@@ -13,7 +13,7 @@
 
 ### Step 1: Access Admin Panel
 - **Option A:** Click the "Admin" link at the bottom of any page footer
-- **Option B:** Go directly to `http://localhost:5500/admin.html`
+- **Option B:** Go directly to `http://localhost:5500/public/admin.html`
 
 ### Step 2: Login
 - Enter password: `flowerpandian1424`

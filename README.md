@@ -16,29 +16,35 @@ Pandian Flowers is a premium flower shop specializing in:
 ```
 pandian-flowers/
 │
-├── index.html          # Home page with hero banner and featured garlands
-├── about.html          # About us page with our story and values
-├── gallery.html        # Gallery with categorized garland collections
-├── services.html       # Services page with detailed offerings
-├── order.html          # Order form for customers
-├── contact.html        # Contact page with form and map
+├── public/
+│   ├── index.html          # Home page with hero banner and featured garlands
+│   ├── about.html          # About us page with our story and values
+│   ├── gallery.html        # Gallery with categorized garland collections
+│   ├── services.html       # Services page with detailed offerings
+│   ├── order.html          # Order form for customers
+│   ├── contact.html        # Contact page with form and map
+│   ├── admin.html          # Admin panel for photo upload
+│   │
+│   ├── assets/
+│   │   ├── css/
+│   │   │   └── style.css   # Custom CSS with color themes and animations
+│   │   ├── js/
+│   │   │   ├── script.js   # JavaScript for interactivity and validation
+│   │   │   ├── admin.js    # Admin panel logic
+│   │   │   └── gallery-loader.js # Gallery photo loader
+│   │   └── images/
+│   │       ├── wedding/    # Wedding garland images
+│   │       ├── reception/  # Reception decoration images
+│   │       ├── home/       # Home nilavu images
+│   │       └── custom/     # Custom design images
+│   │
+│   └── components/
+│       ├── header.html     # Reusable header component
+│       └── footer.html     # Reusable footer component
 │
-├── css/
-│   └── style.css      # Custom CSS with color themes and animations
-│
-├── js/
-│   └── script.js      # JavaScript for interactivity and form validation
-│
-├── images/
-│   ├── wedding/       # Wedding garland images
-│   ├── reception/     # Reception decoration images
-│   └── home/          # Home nilavu images
-│
-├── components/
-│   ├── header.html    # Reusable header component
-│   └── footer.html    # Reusable footer component
-│
-└── README.md          # This file
+├── docs/                   # Documentation
+├── README.md               # This file
+└── sitemap.xml             # SEO sitemap
 ```
 
 ## 🎨 Features
@@ -67,19 +73,19 @@ git clone https://github.com/yourusername/pandian-flowers.git
 cd pandian-flowers
 ```
 
-2. Open `index.html` in your browser:
+2. Open `public/index.html` in your browser:
 ```bash
 # On Windows
-start index.html
+start public/index.html
 
 # On Mac
-open index.html
+open public/index.html
 
 # On Linux
-xdg-open index.html
+xdg-open public/index.html
 ```
 
-Or simply double-click the `index.html` file.
+Or simply double-click the `public/index.html` file.
 
 ### Development
 
@@ -101,33 +107,33 @@ To make changes:
 
 ## 📱 Pages Overview
 
-### Home Page (`index.html`)
+### Home Page (`public/index.html`)
 - Hero banner with full-width design
 - Featured garland cards
 - Why Choose Us section
 - Customer testimonials
 - Call-to-action buttons
 
-### About Page (`about.html`)
+### About Page (`public/about.html`)
 - Company story and history
 - Why choose Pandian Flowers
 - Our values and commitment
 - Team/founder information
 
-### Gallery Page (`gallery.html`)
+### Gallery Page (`public/gallery.html`)
 - Filterable gallery by category
 - Categories: Wedding, Home Nilavu, Reception, Custom
 - Image cards with descriptions
 - Order buttons for each item
 
-### Services Page (`services.html`)
+### Services Page (`public/services.html`)
 - Detailed service descriptions
 - Event Decoration
 - Custom Garlands
 - Delivery Services
 - Seasonal Specials
 
-### Order Page (`order.html`)
+### Order Page (`public/order.html`)
 - Order form with validation
 - Fields: Name, Email, Phone, Garland Type, Quantity, Event Date, Address, Message
 - Form submission with client-side validation
