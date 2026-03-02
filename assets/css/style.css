@@ -1,0 +1,274 @@
+/* Pandian Flowers - Custom CSS Styles */
+/* Color Palette: White background, Gold/Yellow highlights, Green/Pink accents */
+
+:root {
+    --primary-gold: #d4af37;
+    --primary-green: #2d5f3f;
+    --primary-pink: #ff69b4;
+    --light-pink: #ffc0cb;
+    --light-green: #90ee90;
+    --dark-green: #1a3a28;
+    --text-dark: #333333;
+    --text-light: #666666;
+    --white: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Playfair Display', serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--white);
+}
+
+/* Custom Button Styles */
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-gold) 0%, #f0e68c 100%);
+    color: var(--dark-green);
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary-gold);
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+    background: var(--primary-gold);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--light-green) 100%);
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary-green);
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(45, 95, 63, 0.4);
+}
+
+/* Card Hover Effects */
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Hero Section Background */
+.hero-gradient {
+    background: linear-gradient(135deg, rgba(45, 95, 63, 0.8) 0%, rgba(255, 192, 203, 0.6) 100%);
+}
+
+/* Section Title Underline */
+.section-title-underline::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary-gold), var(--primary-pink));
+    margin: 1rem auto 0;
+}
+
+/* Gallery Filter Buttons */
+.filter-btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    border: 2px solid var(--primary-green);
+    background-color: white;
+    color: var(--primary-green);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: var(--primary-green);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Form Input Styles */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-gold) !important;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-green);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-green);
+}
+
+/* Loading Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+    background: linear-gradient(135deg, rgba(255, 192, 203, 0.1) 0%, rgba(144, 238, 144, 0.1) 100%);
+    border-left: 4px solid var(--primary-gold);
+}
+
+/* Social Icons */
+.social-icon {
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2) rotate(5deg);
+}
+
+/* Map Container */
+.map-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        padding: 0.6rem 1.5rem;
+    }
+}
+
+/* Success/Error Messages */
+.message-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.message-error {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Image Placeholder */
+.img-placeholder {
+    background: linear-gradient(135deg, var(--light-pink) 0%, var(--light-green) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    min-height: 300px;
+}
+
+/* Gallery Item Overlay */
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(45, 95, 63, 0.9);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+/* Mobile Menu Animation */
+@media (max-width: 768px) {
+    .mobile-menu {
+        transition: max-height 0.3s ease-out;
+        overflow: hidden;
+    }
+    
+    .mobile-menu.hidden {
+        max-height: 0;
+    }
+    
+    .mobile-menu.visible {
+        max-height: 500px;
+    }
+}

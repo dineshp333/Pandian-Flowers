@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Order Flowers Online - Pandian Flowers, Coimbatore. Wedding garlands, Home Nilavu, Reception decoration. Easy WhatsApp ordering.">
+    <meta name="keywords" content="order flowers online, flower order Coimbatore, wedding flower order, online flower delivery">
+    <meta name="author" content="Pandian Flowers">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Order Flowers - Pandian Flowers Coimbatore">
+    <meta property="og:description" content="Easy online flower ordering. Choose your design and order via WhatsApp.">
+    <title>Order Flowers Online - Pandian Flowers | Coimbatore Delivery</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-green-800 to-green-600 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-3">
+                    <span class="text-5xl">🌸</span>
+                    <div>
+                        <h1 class="text-2xl md:text-3xl font-bold">Pandian Flowers</h1>
+                        <p class="text-xs md:text-sm text-green-200">Beautiful Garlands for Every Occasion</p>
+                    </div>
+                </div>
+                
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-6">
+                        <li><a href="index.html" class="hover:text-yellow-400 transition-colors duration-300 font-semibold">Home</a></li>
+                        <li><a href="about.html" class="hover:text-yellow-400 transition-colors duration-300 font-semibold">About</a></li>
+                        <li><a href="gallery.html" class="hover:text-yellow-400 transition-colors duration-300 font-semibold">Gallery</a></li>
+                        <li><a href="services.html" class="hover:text-yellow-400 transition-colors duration-300 font-semibold">Services</a></li>
+                        <li><a href="order.html" class="hover:text-yellow-400 transition-colors duration-300 font-semibold">Order</a></li>
+                        <li><a href="contact.html" class="hover:text-yellow-400 transition-colors duration-300 font-semibold">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <ul class="flex flex-col space-y-2">
+                    <li><a href="index.html" class="block py-2 px-4 hover:bg-green-700 rounded transition-colors duration-300">Home</a></li>
+                    <li><a href="about.html" class="block py-2 px-4 hover:bg-green-700 rounded transition-colors duration-300">About</a></li>
+                    <li><a href="gallery.html" class="block py-2 px-4 hover:bg-green-700 rounded transition-colors duration-300">Gallery</a></li>
+                    <li><a href="services.html" class="block py-2 px-4 hover:bg-green-700 rounded transition-colors duration-300">Services</a></li>
+                    <li><a href="order.html" class="block py-2 px-4 hover:bg-green-700 rounded transition-colors duration-300">Order</a></li>
+                    <li><a href="contact.html" class="block py-2 px-4 hover:bg-green-700 rounded transition-colors duration-300">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-pink-100 to-green-100 py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-5xl font-bold text-green-800 mb-4">Place Your Order</h2>
+            <p class="text-xl text-gray-700 max-w-3xl mx-auto">Fill out the form below or order directly via WhatsApp for fastest response!</p>
+        </div>
+    </section>
+
+    <!-- Quick WhatsApp Order -->
+    <section class="py-8 bg-gradient-to-r from-green-600 to-green-500">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+                <div class="text-white">
+                    <p class="text-lg font-semibold">⚡ Want Quick Service?</p>
+                    <p class="text-sm">Get instant response on WhatsApp!</p>
+                </div>
+                <a href="https://wa.me/919952881424?text=Hi, I want to place an order for garlands" target="_blank" class="bg-white text-green-700 px-8 py-4 rounded-full font-bold text-lg hover:bg-green-50 transition-all duration-300 inline-flex items-center shadow-lg">
+                    <span class="text-3xl mr-2">💬</span> Order on WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-gradient-to-br from-green-50 to-pink-50 p-8 rounded-lg shadow-xl">
+                    <h3 class="text-3xl font-bold text-green-800 mb-6 text-center">Order Form</h3>
+                    <p class="text-center text-gray-600 mb-8">Fill in your details and we'll contact you shortly to confirm your order</p>
+                    
+                    <form id="orderForm" class="space-y-6">
+                        <!-- Name -->
+                        <div>
+                            <label for="name" class="block text-green-800 font-semibold mb-2">Full Name *</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 border-2 border-green-200 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors">
+                        </div>
+
+                        <!-- Email -->
+                        <div>
+                            <label for="email" class="block text-green-800 font-semibold mb-2">Email Address *</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border-2 border-green-200 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors">
+                        </div>
+
+                        <!-- Phone -->
+                        <div>
+                            <label for="phone" class="block text-green-800 font-semibold mb-2">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 border-2 border-green-200 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors" placeholder="e.g., 9876543210">
+                        </div>
+
+                        <!-- Garland Type -->
+                        <div>
+                            <label for="garlandType" class="block text-green-800 font-semibold mb-2">Type of Garland *</label>
+                            <select id="garlandType" name="garlandType" required class="w-full px-4 py-3 border-2 border-green-200 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors">
+                                <option value="">-- Select Garland Type --</option>
+                                <option value="Wedding Garland">Wedding Garland</option>
+                                <option value="Home Nilavu">Home Nilavu</option>
+                                <option value="Reception Decoration">Reception Decoration</option>
+                                <option value="Custom Design">Custom Design</option>
+                                <option value="Birthday Decoration">Birthday Decoration</option>
+                                <option value="Anniversary Decoration">Anniversary Decoration</option>
+                                <option value="Others">Others (Please Specify)</option>
+                            </select>
+                        </div>
+
+                        <!-- Others Text Box (Hidden by default) -->
+                        <div id="othersBox" class="hidden">
+                            <label for="othersDetail" class="block text-green-800 font-semibold mb-2">Please specify what you need *</label>
+                            <textarea id="othersDetail" name="othersDetail" rows="3" class="w-full px-4 py-3 border-2 border-green-200 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors" placeholder="Describe the type of flowers/garlands you need..."></textarea>
+                        </div>
+
+                        <!-- Quantity -->
+                        <div>
+                            <label for="quantity" class="block text-green-800 font-semibold mb-2">Quantity *</label>
+                            <input type="number" id="quantity" name="quantity" min="1" value="1" required class="w-full px-4 py-3 border-2 border-green-200 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors">
+                            <p class="text-sm text-gray-600 mt-1">Number of garlands/sets needed</p>
+                        </div>
+
+                        <!-- Event Date -->
+                        <div>
+                            <label for="eventDate" class="block text-green-800 font-semibold mb-2">Event Date *</label>
+                            <input type="date" id="eventDate" name="eventDate" required class="w-full px-4 py-3 border-2 border-green-200 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors">
+                            <p class="text-sm text-gray-600 mt-1">When do you need the garlands?</p>
+                        </div>
+
+                        <!-- Delivery Address -->
+                        <div>
+                            <label for="address" class="block text-green-800 font-semibold mb-2">Delivery Address *</label>
+                            <textarea id="address" name="address" rows="3" required class="w-full px-4 py-3 border-2 border-green-200 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors" placeholder="Enter full delivery address..."></textarea>
+                        </div>
+
+                        <!-- Additional Message -->
+                        <div>
+                            <label for="message" class="block text-green-800 font-semibold mb-2">Additional Message (Optional)</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border-2 border-green-200 rounded-lg focus:border-yellow-400 focus:outline-none transition-colors" placeholder="Any special requirements or preferences..."></textarea>
+                        </div>
+
+                        <!-- Submit Buttons -->
+                        <div class="space-y-4">
+                            <button type="submit" class="w-full bg-gradient-to-r from-green-600 to-green-500 text-white py-4 rounded-lg font-bold text-lg hover:from-green-700 hover:to-green-600 transition-all duration-300 shadow-lg">
+                                📝 Submit Order Request
+                            </button>
+                            
+                            <p class="text-center text-gray-600 text-sm">OR</p>
+                            
+                            <button type="button" id="whatsappOrderBtn" class="w-full bg-gradient-to-r from-green-700 to-green-600 text-white py-4 rounded-lg font-bold text-lg hover:from-green-800 hover:to-green-700 transition-all duration-300 shadow-lg flex items-center justify-center">
+                                <span class="text-2xl mr-2">💬</span> Send Order via WhatsApp
+                            </button>
+                        </div>
+
+                        <p class="text-center text-sm text-gray-600 mt-4">
+                            We'll contact you within 2 hours to confirm your order and pricing.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Order From Us -->
+    <section class="py-16 bg-gradient-to-br from-pink-50 to-green-50">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-bold text-center text-green-800 mb-12">Why Order From Us?</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="text-center p-6 bg-white rounded-lg shadow-md">
+                    <div class="text-5xl mb-3">🌿</div>
+                    <h4 class="font-bold text-green-800 mb-2">Fresh Daily</h4>
+                    <p class="text-sm text-gray-600">Flowers picked fresh every morning</p>
+                </div>
+                
+                <div class="text-center p-6 bg-white rounded-lg shadow-md">
+                    <div class="text-5xl mb-3">⚡</div>
+                    <h4 class="font-bold text-green-800 mb-2">Fast Delivery</h4>
+                    <p class="text-sm text-gray-600">Same-day delivery available</p>
+                </div>
+                
+                <div class="text-center p-6 bg-white rounded-lg shadow-md">
+                    <div class="text-5xl mb-3">💯</div>
+                    <h4 class="font-bold text-green-800 mb-2">Quality Assured</h4>
+                    <p class="text-sm text-gray-600">100% satisfaction guaranteed</p>
+                </div>
+                
+                <div class="text-center p-6 bg-white rounded-lg shadow-md">
+                    <div class="text-5xl mb-3">💰</div>
+                    <h4 class="font-bold text-green-800 mb-2">Best Prices</h4>
+                    <p class="text-sm text-gray-600">Affordable and transparent</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-gray-900 to-green-900 text-white mt-16">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-yellow-400">Pandian Flowers</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Creating beautiful floral arrangements and garlands for all your special occasions. Quality, tradition, and elegance in every creation.
+                    </p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://facebook.com" target="_blank" class="text-3xl hover:text-yellow-400 transition-all duration-300 social-icon">📘</a>
+                        <a href="https://instagram.com" target="_blank" class="text-3xl hover:text-pink-400 transition-all duration-300 social-icon">📷</a>
+                        <a href="https://wa.me/919952881424" target="_blank" class="text-3xl hover:text-green-400 transition-all duration-300 social-icon">💬</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-yellow-400">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Home</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">About Us</a></li>
+                        <li><a href="gallery.html" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Gallery</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Our Services</a></li>
+                        <li><a href="order.html" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Place Order</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-yellow-400">Our Services</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="services.html#wedding" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Wedding Garlands</a></li>
+                        <li><a href="services.html#reception" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Reception Decorations</a></li>
+                        <li><a href="services.html#nilavu" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Home Nilavu</a></li>
+                        <li><a href="services.html#custom" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Custom Garlands</a></li>
+                        <li><a href="services.html#delivery" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Delivery Services</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-yellow-400">Contact Info</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start">
+                            <span class="text-xl mr-2">📍</span>
+                            <span class="text-gray-300">Mariyamman Kovil Opposite, Varatharajapuram, Coimbatore - 15</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-xl mr-2">📞</span>
+                            <a href="tel:+919952881424" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">+91 99528 81424</a>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-xl mr-2">💬</span>
+                            <a href="https://wa.me/919952881424" target="_blank" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">WhatsApp Us</a>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-xl mr-2">🕒</span>
+                            <span class="text-gray-300">Open Daily: 7:00 AM - 9:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400 text-sm">
+                    &copy; 2026 Pandian Flowers. All rights reserved. | Designed with 💐 for beautiful celebrations
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/script.js"></script>
+    
+    <!-- Order Page Specific JavaScript -->
+    <script>
+        // Show/Hide "Others" text box based on selection
+        document.getElementById('garlandType').addEventListener('change', function() {
+            const othersBox = document.getElementById('othersBox');
+            const othersDetail = document.getElementById('othersDetail');
+            
+            if (this.value === 'Others') {
+                othersBox.classList.remove('hidden');
+                othersDetail.setAttribute('required', 'required');
+            } else {
+                othersBox.classList.add('hidden');
+                othersDetail.removeAttribute('required');
+            }
+        });
+
+        // WhatsApp Order Button
+        document.getElementById('whatsappOrderBtn').addEventListener('click', function() {
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const garlandType = document.getElementById('garlandType').value;
+            const quantity = document.getElementById('quantity').value;
+            const eventDate = document.getElementById('eventDate').value;
+            const address = document.getElementById('address').value;
+            const message = document.getElementById('message').value;
+            const othersDetail = document.getElementById('othersDetail').value;
+            
+            // Build WhatsApp message
+            let whatsappMessage = `Hi! I want to place an order:\n\n`;
+            whatsappMessage += `Name: ${name}\n`;
+            whatsappMessage += `Phone: ${phone}\n`;
+            whatsappMessage += `Garland Type: ${garlandType}\n`;
+            
+            if (garlandType === 'Others' && othersDetail) {
+                whatsappMessage += `Details: ${othersDetail}\n`;
+            }
+            
+            whatsappMessage += `Quantity: ${quantity}\n`;
+            whatsappMessage += `Event Date: ${eventDate}\n`;
+            whatsappMessage += `Delivery Address: ${address}\n`;
+            
+            if (message) {
+                whatsappMessage += `Additional Message: ${message}\n`;
+            }
+            
+            // URL encode the message
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            
+            // Open WhatsApp
+            window.open(`https://wa.me/919952881424?text=${encodedMessage}`, '_blank');
+        });
+
+        // Set minimum date to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('eventDate').setAttribute('min', today);
+    </script>
+</body>
+</html>
