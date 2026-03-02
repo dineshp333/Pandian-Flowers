@@ -101,27 +101,27 @@ function validateForm(form) {
     const requiredFields = form.querySelectorAll('[required]');
     
     requiredFields.forEach(field => {
-        if (!field.value.trim()) {
+        const value = field.value.trim();
+        
+        // Empty field check
+        if (!value) {
             showFieldError(field, 'This field is required');
             isValid = false;
             return;
         }
         
-        // Email validation
+        // Email validation (using security function)
         if (field.type === 'email') {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(field.value)) {
+            if (!isValidEmail(value)) {
                 showFieldError(field, 'Please enter a valid email address');
                 isValid = false;
                 return;
             }
         }
         
-        // Phone validation
+        // Phone validation (using security function)
         if (field.type === 'tel') {
-            const phoneRegex = /^[0-9]{10,}$/;
-            const cleanPhone = field.value.replace(/\D/g, '');
-            if (!phoneRegex.test(cleanPhone)) {
+            if (!isValidPhone(value)) {
                 showFieldError(field, 'Please enter a valid phone number (10+ digits)');
                 isValid = false;
                 return;
@@ -130,7 +130,7 @@ function validateForm(form) {
         
         // Date validation (not in the past)
         if (field.type === 'date') {
-            const selectedDate = new Date(field.value);
+            const selectedDate = new Date(value);
             const today = new Date();
             today.setHours(0, 0, 0, 0);
             
@@ -139,6 +139,14 @@ function validateForm(form) {
                 isValid = false;
                 return;
             }
+        }
+        
+        // XSS Prevention: Check for suspicious input
+        if (value.includes('<') || value.includes('>') || value.includes('{') || value.includes('}')) {
+            showFieldError(field, 'Invalid characters detected');
+            isValid = false;
+            SecurityAudit.log('Form: Suspicious input detected', 'warn', { field: field.name });
+            return;
         }
     });
     
@@ -170,7 +178,9 @@ function showMessage(type, message) {
     
     const messageDiv = document.createElement('div');
     messageDiv.className = type === 'success' ? 'message-success' : 'message-error';
-    messageDiv.textContent = message;
+    
+    // SECURITY: Use textContent to prevent XSS (only text, no HTML)
+    messageDiv.textContent = sanitizeText(message);
     
     // Add to the top of the form or page
     const form = document.querySelector('form');
