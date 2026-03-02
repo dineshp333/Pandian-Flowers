@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pandian Flowers - Test Suite</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .test-pass { background-color: #dcfce7; border-left: 4px solid #22c55e; }
+        .test-fail { background-color: #fee2e2; border-left: 4px solid #ef4444; }
+        .test-warning { background-color: #fef3c7; border-left: 4px solid #f59e0b; }
+        .console-output {
+            font-family: 'Courier New', monospace;
+            background-color: #1f2937;
+            color: #10b981;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen">
+        <!-- Header -->
+        <div class="bg-gradient-to-r from-green-800 to-green-600 text-white p-6 shadow-lg">
+            <div class="max-w-6xl mx-auto">
+                <h1 class="text-4xl font-bold mb-2">🧪 Pandian Flowers Test Suite</h1>
+                <p class="text-green-100">Automated Testing & Quality Assurance</p>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="max-w-6xl mx-auto p-6">
+            <!-- Control Panel -->
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Test Control Panel</h2>
+                
+                <div class="flex flex-wrap gap-4 mb-6">
+                    <button onclick="runAllTests()" class="bg-green-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-700 transition">
+                        ▶️ Run All Tests
+                    </button>
+                    <button onclick="runFunctionalTests()" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition">
+                        📋 Functional Tests Only
+                    </button>
+                    <button onclick="runSecurityTests()" class="bg-red-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-red-700 transition">
+                        🔒 Security Tests Only
+                    </button>
+                    <button onclick="clearConsole()" class="bg-gray-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-700 transition">
+                        🗑️ Clear Console
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-4 gap-4">
+                    <div class="bg-gray-100 p-4 rounded-lg text-center">
+                        <div class="text-3xl font-bold text-green-600" id="passCount">0</div>
+                        <div class="text-gray-600 text-sm">Passed</div>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg text-center">
+                        <div class="text-3xl font-bold text-red-600" id="failCount">0</div>
+                        <div class="text-gray-600 text-sm">Failed</div>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg text-center">
+                        <div class="text-3xl font-bold text-yellow-600" id="warningCount">0</div>
+                        <div class="text-gray-600 text-sm">Warnings</div>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg text-center">
+                        <div class="text-3xl font-bold text-blue-600" id="totalCount">0</div>
+                        <div class="text-gray-600 text-sm">Total Tests</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Test Results</h2>
+                <div id="testResults" class="space-y-2 max-h-96 overflow-y-auto">
+                    <p class="text-gray-500 text-center py-8">Run tests to see results...</p>
+                </div>
+            </div>
+
+            <!-- Console Output -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">📊 Console Output</h2>
+                <div id="console" class="console-output p-4 rounded-lg h-64 overflow-y-auto text-sm">
+                    <div style="color: #60a5fa;">📝 Console initialized. Run tests to see output...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let testData = {
+            passed: 0,
+            failed: 0,
+            warnings: 0,
+            results: []
+        };
+
+        function log(message, type = 'log') {
+            const console = document.getElementById('console');
+            const prefix = {
+                'log': '▶ ',
+                'pass': '✅ ',
+                'fail': '❌ ',
+                'warn': '⚠️  '
+            };
+            
+            const line = document.createElement('div');
+            line.textContent = (prefix[type] || '') + message;
+            
+            if (type === 'pass') line.style.color = '#22c55e';
+            if (type === 'fail') line.style.color = '#ef4444';
+            if (type === 'warn') line.style.color = '#f59e0b';
+            
+            console.appendChild(line);
+            console.scrollTop = console.scrollHeight;
+        }
+
+        function addResult(testName, status, details = '') {
+            testData.results.push({ name: testName, status, details });
+            updateUI();
+        }
+
+        function updateUI() {
+            testData.passed = testData.results.filter(r => r.status === 'pass').length;
+            testData.failed = testData.results.filter(r => r.status === 'fail').length;
+            testData.warnings = testData.results.filter(r => r.status === 'warn').length;
+            
+            document.getElementById('passCount').textContent = testData.passed;
+            document.getElementById('failCount').textContent = testData.failed;
+            document.getElementById('warningCount').textContent = testData.warnings;
+            document.getElementById('totalCount').textContent = testData.results.length;
+
+            // Update results display
+            const resultsDiv = document.getElementById('testResults');
+            if (testData.results.length === 0) {
+                resultsDiv.innerHTML = '<p class="text-gray-500 text-center py-8">No test results yet...</p>';
+                return;
+            }
+
+            resultsDiv.innerHTML = testData.results.map(r => {
+                const statusClass = r.status === 'pass' ? 'test-pass' : 
+                                   r.status === 'fail' ? 'test-fail' : 'test-warning';
+                const statusEmoji = r.status === 'pass' ? '✅' : 
+                                   r.status === 'fail' ? '❌' : '⚠️';
+                
+                return `
+                    <div class="${statusClass} p-3 rounded">
+                        <div class="font-bold">${statusEmoji} ${r.name}</div>
+                        ${r.details ? `<div class="text-sm text-gray-600 mt-1">${r.details}</div>` : ''}
+                    </div>
+                `;
+            }).join('');
+        }
+
+        async function runAllTests() {
+            clearResults();
+            log('Starting comprehensive test suite...', 'log');
+            
+            runFunctionalTests();
+            await new Promise(r => setTimeout(r, 500));
+            
+            runSecurityTests();
+            await new Promise(r => setTimeout(r, 500));
+            
+            runPerformanceTests();
+            await new Promise(r => setTimeout(r, 500));
+            
+            log('All tests completed!', 'pass');
+        }
+
+        function runFunctionalTests() {
+            log('🧪 Running Functional Tests...', 'log');
+            
+            // Test 1: Navigation
+            const navLinks = document.querySelectorAll('nav a');
+            if (navLinks.length > 0) {
+                addResult('Navigation Links', 'pass', `Found ${navLinks.length} links`);
+                log(`Navigation: ${navLinks.length} links found`);
+            } else {
+                addResult('Navigation Links', 'fail', 'No navigation links found');
+                log('Navigation: FAILED - no links found');
+            }
+
+            // Test 2: Mobile Menu
+            const mobileMenuBtn = document.getElementById('mobile-menu-button');
+            if (mobileMenuBtn) {
+                addResult('Mobile Menu Button', 'pass', 'Mobile menu present');
+                log('Mobile Menu: Present');
+            } else {
+                addResult('Mobile Menu Button', 'warn', 'Mobile menu not found (may not be current page)');
+                log('Mobile Menu: Not found on current page');
+            }
+
+            // Test 3: Page Title
+            if (document.title && document.title.length > 0) {
+                addResult('Page Title', 'pass', `"${document.title}"`);
+                log(`Page Title: "${document.title}"`);
+            } else {
+                addResult('Page Title', 'fail', 'No page title');
+                log('Page Title: FAILED');
+            }
+
+            // Test 4: Meta Viewport
+            const viewport = document.querySelector('meta[name="viewport"]');
+            if (viewport) {
+                addResult('Responsive Meta Tag', 'pass', 'Viewport meta present');
+                log('Viewport: Present and responsive');
+            } else {
+                addResult('Responsive Meta Tag', 'fail', 'No viewport meta tag');
+                log('Viewport: FAILED');
+            }
+
+            // Test 5: Forms exist
+            const forms = document.querySelectorAll('form');
+            if (forms.length > 0) {
+                addResult('Forms Found', 'pass', `${forms.length} form(s) detected`);
+                log(`Forms: ${forms.length} forms found`);
+            } else {
+                addResult('Forms Found', 'warn', 'No forms on current page');
+                log('Forms: No forms on this page');
+            }
+        }
+
+        function runSecurityTests() {
+            log('🔒 Running Security Tests...', 'log');
+            
+            // Test 1: Check for hardcoded password
+            const scripts = Array.from(document.querySelectorAll('script')).map(s => s.textContent).join('');
+            if (scripts.includes('flowerpandian1424')) {
+                addResult('Hardcoded Password', 'fail', 'Password exposed in client code');
+                log('Security: CRITICAL - Hardcoded password found!');
+            } else {
+                addResult('Hardcoded Password', 'pass', 'No hardcoded credentials found');
+                log('Hardcoded Password: Check passed');
+            }
+
+            // Test 2: HTTPS
+            if (window.location.protocol === 'https:') {
+                addResult('HTTPS Enforcement', 'pass', 'Using HTTPS');
+                log('HTTPS: Enabled ✓');
+            } else {
+                addResult('HTTPS Enforcement', 'fail', 'Not using HTTPS');
+                log('HTTPS: FAILED - Not encrypted');
+            }
+
+            // Test 3: CSP Headers
+            const cspMeta = document.querySelector('meta[http-equiv="Content-Security-Policy"]');
+            if (cspMeta) {
+                addResult('CSP Headers', 'pass', 'CSP policy present');
+                log('CSP Headers: Present');
+            } else {
+                addResult('CSP Headers', 'warn', 'No CSP meta tag (server-side may still be set)');
+                log('CSP: Consider adding Content Security Policy');
+            }
+
+            // Test 4: External scripts
+            const externalScripts = document.querySelectorAll('script[src]');
+            if (externalScripts.length > 0) {
+                const srcs = Array.from(externalScripts).map(s => s.src).join(', ');
+                addResult('External Scripts', 'warn', `${externalScripts.length} external scripts loaded`);
+                log(`External Scripts: ${externalScripts.length} found (verify all are trusted)`);
+            }
+
+            // Test 5: Target="_blank" without rel
+            const unsafeLinks = document.querySelectorAll('a[target="_blank"]:not([rel])');
+            if (unsafeLinks.length > 0) {
+                addResult('XSS Prevention (links)', 'warn', `${unsafeLinks.length} unsafe anchor tags`);
+                log(`Unsafe Links: ${unsafeLinks.length} links with target="_blank" without rel`);
+            } else {
+                addResult('XSS Prevention (links)', 'pass', 'All external links safe');
+                log('External Links: All properly configured');
+            }
+        }
+
+        function runPerformanceTests() {
+            log('⚡ Running Performance Tests...', 'log');
+            
+            // Test 1: DOM element count
+            const elementCount = document.querySelectorAll('*').length;
+            if (elementCount < 5000) {
+                addResult('DOM Size', 'pass', `${elementCount} elements (good)`);
+                log(`DOM Elements: ${elementCount}`);
+            } else {
+                addResult('DOM Size', 'warn', `${elementCount} elements (large DOM)`);
+                log(`DOM Size: High - ${elementCount} elements`);
+            }
+
+            // Test 2: Image count
+            const images = document.querySelectorAll('img');
+            addResult('Images Loaded', 'pass', `${images.length} images detected`);
+            log(`Images: ${images.length} found`);
+
+            // Test 3: CSS files
+            const stylesheets = document.querySelectorAll('link[rel="stylesheet"]');
+            addResult('Stylesheets', 'pass', `${stylesheets.length} CSS files`);
+            log(`Stylesheets: ${stylesheets.length} loaded`);
+
+            // Test 4: Performance API
+            if (window.performance && window.performance.timing) {
+                const loadTime = window.performance.timing.loadEventEnd - window.performance.timing.navigationStart;
+                if (loadTime < 3000) {
+                    addResult('Page Load Time', 'pass', `${loadTime}ms (excellent)`);
+                    log(`Load Time: ${loadTime}ms ✓`);
+                } else if (loadTime < 5000) {
+                    addResult('Page Load Time', 'warn', `${loadTime}ms (acceptable)`);
+                    log(`Load Time: ${loadTime}ms (acceptable)`);
+                } else {
+                    addResult('Page Load Time', 'fail', `${loadTime}ms (slow)`);
+                    log(`Load Time: ${loadTime}ms (slow)`);
+                }
+            }
+
+            // Test 5: Memory
+            if (performance.memory) {
+                const used = (performance.memory.usedJSHeapSize / 1048576).toFixed(2);
+                addResult('Memory Usage', 'pass', `${used}MB used`);
+                log(`Memory: ${used}MB in use`);
+            }
+        }
+
+        function clearResults() {
+            testData = { passed: 0, failed: 0, warnings: 0, results: [] };
+            document.getElementById('console').innerHTML = '';
+            updateUI();
+        }
+
+        function clearConsole() {
+            document.getElementById('console').innerHTML = '<div style="color: #60a5fa;">📝 Console cleared</div>';
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            log('🧪 Test Suite Loaded - Click "Run All Tests" to start');
+            log('Current Page: ' + window.location.pathname);
+            log('Browser: ' + navigator.userAgent.split(' ').slice(-2).join(' '));
+        });
+    </script>
+</body>
+</html>
