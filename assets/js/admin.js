@@ -1,6 +1,16 @@
-// Admin Panel Logic
-const ADMIN_PASSWORD = "flowerpandian1424";
-const SECURITY_ANSWER = "make upma happy";
+// ⚠️ SECURITY WARNING: This file is DEPRECATED!
+// Use admin-secure.js instead for production
+// 
+// CRITICAL VULNERABILITY: Hardcoded credentials exposed!
+// - Never store passwords in client-side JavaScript
+// - This file is kept for reference only
+// - All sensitive data must be validated on backend
+
+console.error('⚠️ SECURITY: admin.js is deprecated. Use admin-secure.js instead');
+
+// Intentionally removed - use backend authentication instead
+const ADMIN_PASSWORD = null;      // ❌ REMOVED - Backend auth required
+const SECURITY_ANSWER = null;     // ❌ REMOVED - Use email recovery
 let currentCategory = "all";
 let uploadedPhotos = {
     wedding: [],
