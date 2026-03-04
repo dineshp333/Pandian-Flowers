@@ -36,11 +36,8 @@ body {
 }
 
 .brand-title {
-    background: linear-gradient(135deg, #005a9c 0%, #0073b8 100%);
     color: #ffd700;
     font-weight: 900;
-    padding: 10px 20px;
-    border-radius: 8px;
     text-shadow: 
         2px 2px 0px rgba(0, 0, 0, 0.3),
         3px 3px 0px rgba(255, 255, 255, 0.2),
