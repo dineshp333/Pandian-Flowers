@@ -36,15 +36,8 @@ body {
 }
 
 .brand-title {
-    display: inline-block;
-    width: 5.6em;
-    height: 1em;
-    background: url('../../for%20web.png') center / 100% 100% no-repeat;
-    color: transparent !important;
+    color: inherit;
     vertical-align: middle;
-    overflow: hidden;
-    text-indent: -9999px;
-    white-space: nowrap;
 }
 
 /* Custom Button Styles */
