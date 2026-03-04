@@ -1,7 +1,7 @@
-# 📋 Pandian Flowers - Requirements Document
+# 📋 பாண்டியன் பிளவர்ஸ் - Requirements Document
 
 ## Document Information
-- **Project:** Pandian Flowers Website
+- **Project:** பாண்டியன் பிளவர்ஸ் Website
 - **Document Type:** Software Requirements Specification (SRS)
 - **Version:** 1.0
 - **Date:** February 2, 2026
@@ -11,7 +11,7 @@
 
 ## 1. Executive Summary
 
-This document outlines functional and non-functional requirements for the Pandian Flowers e-commerce website. The system is a responsive web application for showcasing flower arrangements and enabling direct ordering via WhatsApp.
+This document outlines functional and non-functional requirements for the பாண்டியன் பிளவர்ஸ் e-commerce website. The system is a responsive web application for showcasing flower arrangements and enabling direct ordering via WhatsApp.
 
 ---
 
@@ -355,7 +355,7 @@ This document outlines functional and non-functional requirements for the Pandia
 ```
 
 ### 5.2 Contact Information
-- **Business Name:** Pandian Flowers
+- **Business Name:** பாண்டியன் பிளவர்ஸ்
 - **Phone:** +91 99528 81424
 - **Email:** pandianflowers2020@gmail.com
 - **Address:** Mariyamman Kovil Opposite, Varatharajapuram, Coimbatore - 15
@@ -450,7 +450,7 @@ This document outlines functional and non-functional requirements for the Pandia
 
 | Role | Name | Date | Status |
 |------|------|------|--------|
-| Product Owner | Pandian Flowers | 2026-02-02 | ✅ Approved |
+| Product Owner | பாண்டியன் பிளவர்ஸ் | 2026-02-02 | ✅ Approved |
 | Developer | GitHub Copilot | 2026-02-02 | ✅ Approved |
 | QA Lead | QA Team | 2026-02-02 | ✅ Approved |
 

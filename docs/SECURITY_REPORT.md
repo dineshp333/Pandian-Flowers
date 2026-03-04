@@ -1,5 +1,5 @@
 # 🔒 SECURITY VULNERABILITY REPORT
-## Pandian Flowers Website
+## பாண்டியன் பிளவர்ஸ் Website
 **Date:** March 2, 2026  
 **Risk Level:** HIGH
 

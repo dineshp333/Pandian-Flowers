@@ -1,11 +1,11 @@
 @echo off
-REM Share Pandian Flowers Website with localhost.run (No installation needed!)
+REM Share பாண்டியன் பிளவர்ஸ் Website with localhost.run (No installation needed!)
 
 cd /d "%~dp0"
 
 REM Start the web server in background
 echo Starting web server...
-start "Pandian Flowers Server" cmd /k python -m http.server 8000 --directory "public"
+start "பாண்டியன் பிளவர்ஸ் Server" cmd /k python -m http.server 8000 --directory "public"
 
 REM Wait for server to start
 timeout /t 3 /nobreak

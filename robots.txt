@@ -1,4 +1,4 @@
-# robots.txt for Pandian Flowers Website
+# robots.txt for பாண்டியன் பிளவர்ஸ் Website
 # Allow all search engines to crawl
 
 User-agent: *

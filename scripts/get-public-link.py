@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Simple Public Link Generator for Pandian Flowers Website
+Simple Public Link Generator for பாண்டியன் பிளவர்ஸ் Website
 Uses Cloudflare Tunnel (Warp) or similar service
 """
 
@@ -13,7 +13,7 @@ def main():
     port = 8000
 
     print("=" * 60)
-    print("PANDIAN FLOWERS - Public Link Generator")
+    print("பாண்டியன் பிளவர்ஸ் - Public Link Generator")
     print("=" * 60)
     print()
     print("Web Server Port: 8000")

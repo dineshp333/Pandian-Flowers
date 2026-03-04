@@ -1,5 +1,5 @@
 @echo off
-REM Start Pandian Flowers Website
+REM Start பாண்டியன் பிளவர்ஸ் Website
 
 cd /d "%~dp0"
 start http://localhost:8000

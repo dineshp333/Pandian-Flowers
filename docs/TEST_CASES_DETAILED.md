@@ -1,5 +1,5 @@
 # 🧪 TEST CASE DOCUMENT
-## Pandian Flowers Website
+## பாண்டியன் பிளவர்ஸ் Website
 **Date:** March 2, 2026  
 **Version:** 1.0  
 **Environment:** GitHub Pages (https://dineshp333.github.io/Pandian-Flowers/)
@@ -19,7 +19,7 @@
 
 ## 📍 TEST SCOPE
 
-**Application:** Pandian Flowers Website (Static HTML/CSS/JS)  
+**Application:** பாண்டியன் பிளவர்ஸ் Website (Static HTML/CSS/JS)  
 **Platform:** Web Browser  
 **Pages Covered:**
 - ✅ Home (index.html)

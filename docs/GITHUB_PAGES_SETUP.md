@@ -1,4 +1,4 @@
-# 🚀 GitHub Pages Deployment Guide - Pandian Flowers
+# 🚀 GitHub Pages Deployment Guide - பாண்டியன் பிளவர்ஸ்
 
 ## ✅ Completed SEO Optimizations:
 
@@ -26,7 +26,7 @@ Your website is now **SEO-optimized** with:
 2. Click **"+" button → New repository**
 3. **Fill in:**
    - **Repository name:** `pandian-flowers` (or any name)
-   - **Description:** Pandian Flowers - Beautiful flower garlands in Coimbatore
+   - **Description:** பாண்டியன் பிளவர்ஸ் - Beautiful flower garlands in Coimbatore
    - **Public** (so it's visible to everyone)
    - **Do NOT initialize with README** (we have one)
 4. Click **"Create repository"**
@@ -107,7 +107,7 @@ https://YOUR_USERNAME.github.io/pandian-flowers/
 - **Ranking:** 1-3 months (with good content)
 
 ### Search for these terms:
-- "Pandian Flowers"
+- "பாண்டியன் பிளவர்ஸ்"
 - "Flower Garlands Coimbatore"
 - "Wedding Flowers Coimbatore"
 - "Home Nilavu Flowers"
@@ -187,4 +187,4 @@ git status
 
 **Your website will be live and searchable in Google within 1-2 weeks!** 🌸🎉
 
-Good luck with Pandian Flowers! 🌼
+Good luck with பாண்டியன் பிளவர்ஸ்! 🌼

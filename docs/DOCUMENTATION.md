@@ -1,4 +1,4 @@
-# 📚 Pandian Flowers - Project Documentation
+# 📚 பாண்டியன் பிளவர்ஸ் - Project Documentation
 
 ## Table of Contents
 1. [Project Overview](#project-overview)
@@ -17,14 +17,14 @@
 
 ## Project Overview
 
-**Project Name:** Pandian Flowers  
+**Project Name:** பாண்டியன் பிளவர்ஸ்  
 **Type:** E-commerce Flower Shop Website  
 **Location:** Coimbatore, Tamil Nadu, India  
 **Contact:** +91 99528 81424  
 **Email:** pandianflowers2020@gmail.com  
 
 ### Purpose
-Pandian Flowers is a responsive web-based flower shop showcasing:
+பாண்டியன் பிளவர்ஸ் is a responsive web-based flower shop showcasing:
 - Wedding garlands
 - Reception decorations
 - Home Nilavu (festival flowers)

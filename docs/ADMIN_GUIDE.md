@@ -1,4 +1,4 @@
-# Pandian Flowers - Admin Panel Guide
+# பாண்டியன் பிளவர்ஸ் - Admin Panel Guide
 
 ## 🔐 Login Credentials
 
@@ -112,4 +112,4 @@
 
 ---
 
-**Made with 💐 for Pandian Flowers**
+**Made with 💐 for பாண்டியன் பிளவர்ஸ்**

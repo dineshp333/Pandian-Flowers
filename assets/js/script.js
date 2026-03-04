@@ -1,4 +1,4 @@
-// Pandian Flowers - JavaScript
+// பாண்டியன் பிளவர்ஸ் - JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize all features
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initGalleryFilters();
     initSmoothScroll();
     
-    console.log('🌸 Pandian Flowers website loaded successfully!');
+    console.log('🌸 பாண்டியன் பிளவர்ஸ் website loaded successfully!');
 });
 
 // Mobile Menu Toggle

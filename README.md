@@ -1,10 +1,10 @@
-# Pandian Flowers Website
+# பாண்டியன் பிளவர்ஸ் Website
 
 A beautiful, responsive flower shop website built with HTML, CSS, JavaScript, and Tailwind CSS.
 
 ## 🌸 About
 
-Pandian Flowers is a premium flower shop specializing in:
+பாண்டியன் பிளவர்ஸ் is a premium flower shop specializing in:
 - Wedding Garlands
 - Reception Decorations
 - Home Nilavu (traditional home decorations)
@@ -116,7 +116,7 @@ To make changes:
 
 ### About Page (`public/about.html`)
 - Company story and history
-- Why choose Pandian Flowers
+- Why choose பாண்டியன் பிளவர்ஸ்
 - Our values and commitment
 - Team/founder information
 
@@ -216,7 +216,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 👨‍💻 Author
 
-Created with 💐 by Pandian Flowers Team
+Created with 💐 by பாண்டியன் பிளவர்ஸ் Team
 
 ## 🙏 Acknowledgments
 
@@ -226,4 +226,4 @@ Created with 💐 by Pandian Flowers Team
 
 ---
 
-**© 2026 Pandian Flowers. All rights reserved.**
+**© 2026 பாண்டியன் பிளவர்ஸ். All rights reserved.**

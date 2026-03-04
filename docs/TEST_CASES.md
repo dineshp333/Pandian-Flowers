@@ -1,7 +1,7 @@
-# 🧪 Pandian Flowers - Test Cases
+# 🧪 பாண்டியன் பிளவர்ஸ் - Test Cases
 
 ## Document Information
-- **Project:** Pandian Flowers Website
+- **Project:** பாண்டியன் பிளவர்ஸ் Website
 - **Document Type:** Test Case Specification
 - **Version:** 1.0
 - **Date:** February 2, 2026
@@ -558,7 +558,7 @@
 | Role | Name | Date | Status |
 |------|------|------|--------|
 | QA Lead | QA Team | 2026-02-02 | ✅ Approved |
-| Product Owner | Pandian Flowers | 2026-02-02 | ✅ Approved |
+| Product Owner | பாண்டியன் பிளவர்ஸ் | 2026-02-02 | ✅ Approved |
 
 ---
 

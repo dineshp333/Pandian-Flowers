@@ -1,4 +1,4 @@
-// Automated Test Suite for Pandian Flowers Website
+// Automated Test Suite for பாண்டியன் பிளவர்ஸ் Website
 // Can be run in browser console or with Node.js
 
 const TestSuite = {
@@ -8,7 +8,7 @@ const TestSuite = {
     
     // Initialize tests
     init() {
-        console.log('🧪 Starting Pandian Flowers Test Suite...\n');
+        console.log('🧪 Starting பாண்டியன் பிளவர்ஸ் Test Suite...\n');
     },
     
     // Test runner
